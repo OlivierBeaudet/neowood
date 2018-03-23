@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e04d3b3f3a6ba041abdad6e125cab1d, type: 3}
+  m_Name: Terrasse-LISSE 5
+  m_EditorClassIdentifier: 
+  label: '<b>Neowood Ultraprotect</b>
+
+    Finition lisse'
+  thumbnailIndex: 0
+  items:
+  - material: {fileID: 2100000, guid: bfb24332373bb4142ad5eb6fa02c60c4, type: 2}
+    textureName: composite-lisse-anthracite
+    textureScale: {x: 1, y: 1}
