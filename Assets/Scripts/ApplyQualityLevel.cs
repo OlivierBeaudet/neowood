@@ -18,7 +18,7 @@ public class ApplyQualityLevel : MonoBehaviour
     {
         m_toggle = GetComponent<Toggle>();
         m_toggle.onValueChanged.AddListener(OnValueChanged);
-        m_toggle.isOn = m_qualityLevel == PlayerPrefs.GetInt("QualityLevel", QualitySettings.GetQualityLevel());
+        m_toggle.isOn = m_qualityLevel == QualitySettings.GetQualityLevel();
 
         m_postProcess = FindObjectOfType<PostProcessingBehaviour>();
         if(m_postProcess == null)
@@ -29,15 +29,15 @@ public class ApplyQualityLevel : MonoBehaviour
     {
         if(newValue)
         {
-            QualitySettings.SetQualityLevel(m_qualityLevel);
+            if (m_qualityLevel >= 0)
+            {
+                QualitySettings.SetQualityLevel(m_qualityLevel);
+            }
 
-            if( m_postProcessingProfile != null && m_postProcess != null )
+            if (m_postProcessingProfile != null && m_postProcess != null)
             {
                 m_postProcess.profile = m_postProcessingProfile;
             }
-
-            PlayerPrefs.SetInt("QualityLevel", m_qualityLevel);
-            PlayerPrefs.Save();
         }
     }
 }
