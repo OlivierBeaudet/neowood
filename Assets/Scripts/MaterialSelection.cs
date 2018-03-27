@@ -15,6 +15,7 @@ public class MaterialSelection : MonoBehaviour
     {
         m_item.GetComponent<Toggle>().isOn = false;
 
+        ToggleGroup group = GetComponentInParent<ToggleGroup>();
         foreach (MaterialVariation variation in m_variations)
         {
             RectTransform item = Instantiate(m_item.gameObject).GetComponent<RectTransform>();
@@ -27,6 +28,7 @@ public class MaterialSelection : MonoBehaviour
             apm.variation = variation;
 
             Toggle toggle = item.gameObject.GetComponent<Toggle>();
+            toggle.isOn = group.AnyTogglesOn() == false;
             (toggle.targetGraphic as Image).sprite = variation.thumbnail.sprite;
         }
 

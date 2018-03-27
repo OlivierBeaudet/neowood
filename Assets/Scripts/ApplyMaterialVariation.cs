@@ -20,15 +20,21 @@ public class ApplyMaterialVariation : MonoBehaviour
         m_toggle.onValueChanged.AddListener(OnValueChanged);
     }
 
-    private IEnumerator Start()
+    private void OnEnable()
+    {
+        if (m_toggle.isOn)
+            m_info.SetVariation(variation);
+    }
+
+    /*private IEnumerator Start()
     {
         m_toggle.isOn = false;
-        m_toggle.isOn = LoadVariation();
+        //m_toggle.isOn = LoadVariation();
 
         yield return null;
 
         m_toggle.isOn = !m_toggle.group.AnyTogglesOn();
-    }
+    }*/
 
     private void OnValueChanged(bool newValue)
     {
@@ -38,7 +44,7 @@ public class ApplyMaterialVariation : MonoBehaviour
         m_info.SetVariation(variation);
         variation.Apply();
 
-        SaveVariation();
+        //SaveVariation();
     }
 
     private bool LoadVariation()

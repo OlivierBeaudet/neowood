@@ -95,10 +95,12 @@ public class Thumbnail
                             return null;
                         }
 
-                        clones[i] = Object.Instantiate(original) as Texture2D;
-                        TextureScale.Bilinear(clones[i], m_width, m_height);
+                        //clones[i] = Object.Instantiate(original) as Texture2D;
+                        //TextureScale.Bilinear(clones[i], m_width, m_height);
+                        clones[i] = new Texture2D(m_width, m_height, TextureFormat.ARGB32, false);
+                        clones[i].SetPixels(0, 0, m_width, m_height, original.GetPixels(0, 0, m_width, m_height));
 
-                        if( i >= 1 )
+                        if ( i >= 1 )
                         {
                             Combine(clones[i-1], clones[i]);
                         }
@@ -121,7 +123,12 @@ public class Thumbnail
 
                     // Debug.Log("Generated sprite: " + m_sprite + " (" + m_lastRect + ")");
 
-                    for (int i = 0; i < clones.Length; i++) Object.Destroy(clones[i]);
+                    for (int i = 0; i < clones.Length; i++)
+                    {
+                        Object.Destroy(clones[i]);
+                        clones[i] = null;
+                    }
+
                     Resources.UnloadUnusedAssets();
                 }
             }

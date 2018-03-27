@@ -38,7 +38,7 @@ public class ToggleTextColor : MonoBehaviour
     private void OnDrawGizmos()
     {
         if(!Application.isPlaying )
-         OnValueChanged(GetComponent<Toggle>().isOn);
+            OnValueChanged(GetComponent<Toggle>().isOn);
     }
 #endif
 }
