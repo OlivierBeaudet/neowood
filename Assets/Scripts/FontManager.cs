@@ -18,12 +18,13 @@ public class FontManager : MonoBehaviour
                 Text text = go.GetComponent<Text>();
                 if (text != null)
                 {
-                    Debug.Log("Apply font: " + text);
+                   // Debug.Log("Apply font: " + text);
                     text.material = fe.material;
                     text.font = fe.font;
                     text.fontSize = 0;
                     text.fontStyle = FontStyle.Normal;
                     text.supportRichText = false;
+                    text.SetNativeSize();
                 }
             }
         }
