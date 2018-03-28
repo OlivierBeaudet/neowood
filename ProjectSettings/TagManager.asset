@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Text_14
+  - Text_12
+  - Text_10
+  - Text_16
   layers:
   - Default
   - TransparentFX

@@ -58,8 +58,10 @@ public class MaterialVariation : ScriptableObject
         }
     }
 
-    [Multiline]
     public string label = "";
+
+    [Multiline]
+    public string description = "";
 
     public int thumbnailIndex = 0;
 

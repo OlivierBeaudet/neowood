@@ -11,11 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e04d3b3f3a6ba041abdad6e125cab1d, type: 3}
   m_Name: Cloture-MIXTE 2
   m_EditorClassIdentifier: 
-  label: '<b>Aluminium /</b>
+  label: 'Neowood Ultraprotect
 
     <b>Neowood Ultraprotect</b>
 
     Finition lisse'
+  description: Mixte Aluminium / Composite
   thumbnailIndex: 1
   items:
   - material: {fileID: 2100000, guid: e1203820af1e0494b972d04fd225b7b9, type: 2}

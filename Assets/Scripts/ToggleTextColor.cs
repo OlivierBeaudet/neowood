@@ -35,7 +35,8 @@ public class ToggleTextColor : MonoBehaviour
     }
 
 #if UNITY_EDITOR
-    private void OnDrawGizmos()
+    [ContextMenu("Apply")]
+    private void Apply()
     {
         if(!Application.isPlaying )
             OnValueChanged(GetComponent<Toggle>().isOn);

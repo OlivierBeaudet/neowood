@@ -11,9 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e04d3b3f3a6ba041abdad6e125cab1d, type: 3}
   m_Name: Terrasse-RAINUREE 2
   m_EditorClassIdentifier: 
-  label: '<b>Neowood Ultraprotect</b>
-
-    Finition grain du bois'
+  label: Neowood Ultraprotect
+  description: "Finition rainur\xE9e"
   thumbnailIndex: 0
   items:
   - material: {fileID: 2100000, guid: bfb24332373bb4142ad5eb6fa02c60c4, type: 2}
